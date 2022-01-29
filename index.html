@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type="text/javascript">
+         //PC-background fading
+         window.addEventListener("DOMContentLoaded", function(e) {
+         var stage = document.getElementById("stage");
+         var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+         var arr = stage.getElementsByTagName("img");
+         for(var i=0; i < arr.length; i++) {
+         arr[i].addEventListener("animationend", fadeComplete, false);
+         }
+         }, false);
+      </script>
+      <script type="text/javascript">
+         //MOB-background fading
+         window.addEventListener("DOMContentLoaded", function(e) {
+         var stag = document.getElementById("stag");
+         var fadeComplete = function(e) { stag.appendChild(arr[0]); };
+         var arr = stag.getElementsByTagName("img");
+         for(var i=0; i < arr.length; i++) {
+         arr[i].addEventListener("animationend", fadeComplete, false);
+         }
+         }, false);
+      </script>
+      <script>
+         //MOB-click bar dropdown link
+         function myFunction() {
+           var x = document.getElementById("myTopnav");
+           if (x.className === "topnav") {
+             x.className += " responsive";
+           } else {
+             x.className = "topnav";
+           }
+         }
+      </script>
+      <title>Fayek</title>
+      <link rel="icon" href="pic/f-icon.gif" type="image/gif">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <style>
+      * {
+      margin: 0px;
+      padding: 0px;
+      }
+      /*PC-center navbar*/
+      #myTopnav{
+      position: absolute;
+      z-index: 100;
+      }
+      .topnav {
+      position: absolute;
+      z-index: 100;
+      list-style:none;
+      margin:0 34%;
+      padding:0;
+      text-align:center;
+      }
+      .topnav a {
+      font-size: 13px;
+      opacity: 0.6;
+      text-decoration: none;
+      color: white;
+      display:inline-block;
+      padding:15px;
+      transition: 0.5s;
+      }
+      .topnav a:hover {
+      color: white;
+      opacity: 1;
+      }
+      /*MOB-hide bar*/
+      .bar{
+      visibility: hidden;
+      }
+      /*PC-riight navbar*/
+      .ig,.fb{
+      width: 15px;
+      height: 15px;
+      opacity: 0.6;
+      transition:0.5s;
+      position: absolute;
+      z-index: 100;
+      margin-top: 8px;
+      }
+      .ig{
+      top:8px;
+      right: 60px;
+      }
+      .ig:hover{
+      opacity: 1;
+      }
+      .fb{     
+      top:8px;
+      right: 30px;
+      }
+      .fb:hover{
+      opacity: 1;
+      }
+      .back-fa{
+      width: 100%;
+      }
+      /*PC-background Fayek logo*/
+      .back-fa img{
+      position: absolute;
+      z-index: 99;
+      background-color: rgb(0,0,0,0.5);
+      }
+      /*MOB-hide background Fayek logo*/
+      .back-f{
+      width: 0px;
+      }
+      /*PC-image size*/
+      img{
+      width: 100%;
+      height: 100%;
+      }
+      /*PC-Background image fadding*/
+      #stage img {
+      position: absolute;
+      }
+      #stage img:nth-of-type(1) {
+      animation-name: fader;
+      animation-delay: 5s;
+      animation-duration: 1s;
+      z-index: 20;
+      }
+      #stage img:nth-of-type(2) {
+      z-index: 10;
+      }
+      #stage img:nth-of-type(n+3) {
+      display: none;
+      }
+      @keyframes fader {
+      from { opacity: 1.0; }
+      to   { opacity: 0.0; }
+      }
+      /*MOB-Hide background fade*/
+      #stag{
+      width: 0px;
+      height: 0px;
+      }
+      @media screen and (max-width:650px){
+      /*MOB-Background image fadding*/
+      .stage{
+      width: 0px;
+      }
+      #stag img {
+      position: absolute;
+      }
+      #stag img:nth-of-type(1) {
+      animation-name: fader;
+      animation-delay: 5s;
+      animation-duration: 1s;
+      z-index: 20;
+      }
+      #stag img:nth-of-type(2) {
+      z-index: 10;
+      }
+      #stag img:nth-of-type(n+3) {
+      display: none;
+      }
+      @keyframes fader {
+      from { opacity: 1.0; }
+      to   { opacity: 0.0; }
+      }    
+      #stage{
+      width: 0px;
+      }
+      /*MOB-Background Fayek logo*/
+      .back-f img{
+      position: absolute;
+      z-index: 99;
+      background-color: rgb(0,0,0,0.5);
+      }
+      /*PC-hide Background Fayek logo*/
+      .back-fa img{
+      width: 0px;
+      }
+      /*MOB-navbar*/
+      .topnav a:not(:first-child) {
+      display: none;
+      }
+      .topnav a.icon {
+      float: left;
+      display: block;
+      }
+      .topnav.responsive {
+      position: absolute;
+      }
+      .topnav.responsive .icon {
+      position: absolute;
+      }
+      .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+      }
+      .topnav {
+      margin:10px;
+      width: 93%;
+      }
+      .topnav a {
+      font-size: 9px;
+      width: 100%;
+      color: white;
+      opacity: 1;
+      margin-left:-3%;
+      }
+      /*MOB-show bar*/
+      .bar{
+      visibility:visible;
+      background-color: rgb(0,0,0,0.0);
+      }
+      /*MOB-||| bar opacity*/
+      .fa{
+      opacity: 0.6;
+      }
+      .fa{
+      opacity: 1;
+      }
+      /*MOB-add border,color on links*/
+      .a{
+      padding:100px;
+      border-bottom:solid 1px;
+      border-color: white;
+      background-color: rgb(0,0,0,0.9);
+      }
+      /*MOb-right navbar*/
+      .ig,.fb{
+      margin-top: 12px;
+      }
+      .ig{
+      width: 15px;
+      top:8px;
+      right: 55px;
+      }
+      .fb{
+      width: 15px;
+      top:8px;
+      right: 25px;
+      }
+      }
+   </style>
+   <body>
+      <div class="back-fa">
+         <img src="pic/pc/fa.png" >
+      </div>
+      <div class="topnav" id="myTopnav">
+         <a class="bar" href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+         </a>
+         <a class="a" href="artwork.html">ARTWORK</a>
+         <a class="a" href="photo.html">PHOTO</a>
+         <a class="a" href="about.html"> ABOUT</a>
+         <a class="a" href="contact.html">CONTACT</a>
+      </div>
+      <div class="ig">
+         <a href="https://www.instagram.com/im.not.faek/"><img src="pic/ig.png" ></a>
+      </div>
+      <div class="fb">
+         <a href="https://www.facebook.com/fayek.hossain.5/"><img src="pic/fb.png" ></a>
+      </div>
+      <div id="stage">
+         <img src="pic/pc/b8.jpg" style="filter: grayscale(100%)" >
+         <img src="pic/pc/b7.jpeg" >
+         <img src="pic/pc/b1.jpeg" >
+         <img src="pic/pc/b2.jpg" >
+         <img src="pic/pc/b3.jpg" >
+         <img src="pic/pc/b4.jpg" >
+         <img src="pic/pc/b6.jpg" >
+         <img src="pic/pc/b5.jpg" >
+      </div>
+      <div class="back-f">
+         <img src="pic/mob/fa.png" >
+      </div>
+      <div id="stag">
+         <img src="pic/mob/b1.jpg" >
+         <img src="pic/mob/b8.jpg" style="filter: grayscale(100%)" >
+         <img src="pic/mob/b2.jpg" >
+         <img src="pic/mob/b3.jpeg" >
+         <img src="pic/mob/b4.jpg" >
+         <img src="pic/mob/b5.jpg" >
+         <img src="pic/mob/b6.jpg" >
+         <img src="pic/mob/b7.jpg" >
+      </div>
+   </body>
+</html>

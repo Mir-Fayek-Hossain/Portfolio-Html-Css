@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+   <style>
+   body{
+       
+            background-color: rgb(0,0,0,0.9);
+            color: white;
+   }
+      * {
+      margin: 0px;
+      padding: 0px;
+      }/*logo*/
+      .mid-logo{
+      padding: 40px 0px 40px 0px;
+      text-align: center;
+      background-color: black;
+      height: 150px;
+      }
+      .mid-logo .logo{
+      opacity: 1;
+      width: 170px;
+      height: 75px;
+      padding-bottom: 20px;
+      transition: 0.5s;
+      }
+      .logo:hover{
+      opacity: 1;
+      }
+      /*PC-center navbar*/
+      #myTopnav{
+      position: absolute;
+      z-index: 100;
+      }
+      .topnav {
+      position: absolute;
+      z-index: 100;
+      list-style:none;
+      margin:0 31%;
+      padding:0;
+      text-align:center;
+      }
+      .topnav a {
+      font-size: 13px;
+      opacity: 0.6;
+      text-decoration: none;
+      color: white;
+      display:inline-block;
+      padding:15px;
+      transition: 0.5s;
+      }
+      /*PC-selected link in navbar*/
+      .topnav .b {
+      font-size: 13px;
+      opacity: 0.9;
+      bottom: 1px;
+      border-width: 0 0 1px;
+      border-style: solid;
+      color: white;
+      display:inline-block;
+      padding:15px;
+      transition: 0.5s;
+      }
+      .topnav a:hover {
+      color: white;
+      opacity: 1;
+      }
+      /*MOB-hide bar*/
+      .bar{
+      visibility: hidden;
+      }
+      img{
+      width: 100%;
+      height: 100%;
+      }
+      /*PC-riight navbar*/
+      .ig,.fb{
+      width: 15px;
+      height: 15px;
+      opacity: 0.6;
+      transition:0.5s;
+      position: absolute;
+      z-index: 100;
+      margin: 15px;
+      }
+      .ig{
+      top:8px;
+      right: 60px;
+      }
+      .ig:hover{
+      opacity: 1;
+      }
+      .fb{     
+      top:8px;
+      right: 30px;
+      }
+      .fb:hover{
+      opacity: 1;
+      }
+   .c{
+      margin-top: 3%;
+      margin-bottom: 2%;
+      margin-left: 10%;
+  float: left;
+  width: 30%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+      @media screen and (max-width:650px){
+      /*MOB-name logo*/
+      .mid-logo{
+      height: 88px;
+      }
+      .mid-logo .logo{
+      width: 110px;
+      height: 55px;
+      }
+      /*MOB-navbar*/
+      .topnav a:not(:first-child) {
+      display: none;
+      }
+      .topnav a.icon {
+      float: left;
+      display: block;
+      }
+      .topnav.responsive {
+      position: absolute;
+      }
+      .topnav.responsive .icon {
+      position: absolute;
+      }
+      .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+      }
+      .topnav {
+      margin:10px;
+      width: 93%;
+      }
+      .topnav a {
+      font-size: 9px;
+      width: 100%;
+      color: white;
+      opacity: 1;
+      margin-left:-3%;
+      }
+      /*MOB-selected link in navbar*/
+      .topnav .b {
+      font-size: 13px;
+      opacity: 0.9;
+      bottom: 0px;
+      color: black;
+      border-width: 0 0 0px;
+      background-color: white;
+      display:inline-block;
+      padding:15px;
+      transition: 0.5s;
+      }
+      /*MOB-show bar*/
+      .bar{
+      visibility:visible;
+      background-color: rgb(0,0,0,0.0);
+      }
+      /*MOB-||| bar opacity*/
+      .fa{
+      opacity: 0.6;
+      }
+      .fa{
+      opacity: 1;
+      }
+      /*MOB-add border,color*/
+      .a{
+      padding:100px;
+      border-bottom:solid 1px;
+      border-color: white;
+      background-color: rgb(0,0,0,0.9);
+      }
+      /*MOb-right navbar*/
+      .ig,.fb{
+      margin-top: 12px;
+      }
+      .ig{
+      width: 15px;
+      top:8px;
+      right: 55px;
+      }
+      .fb{
+      width: 15px;
+      top:8px;
+      right: 25px;
+      }.c{
+         margin-top: 1.5%;
+  width: 100%;
+}
+      }
+   </style>
+   <head>
+      <script>
+         //MOB-click bar dropdown link
+         function myFunction() {
+           var x = document.getElementById("myTopnav");
+           if (x.className === "topnav") {
+             x.className += " responsive";
+           } else {
+             x.className = "topnav";
+           }
+         }
+      </script>
+      <title>Fayek-Contact</title>
+      <link rel="icon" href="pic/f-icon.gif" type="image/gif">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="mid-logo">
+         <a href="index.html"><img class="logo" src="pic/photo/f.png" ></a>
+         <div class="topnav" id="myTopnav">
+            <a class="bar" href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+            <a class="a" href="index.html">HOME</a>
+            <a class="a" href="artwork.html">ARTWORK</a>
+            <a class="a" href="photo.html">PHOTO</a>
+            <a class="a" href="about.html"> ABOUT</a>
+            <a class="b" href="contact.html">CONTACT</a>
+         </div>
+         <div class="ig">
+            <a href="https://www.instagram.com/im.not.faek/"><img src="pic/ig.png" ></a>
+         </div>
+         <div class="fb">
+            <a href="https://www.facebook.com/fayek.hossain.5/"><img src="pic/fb.png" ></a>
+         </div>
+      </div>
+<div>
+  <div class="c">
+    <p>𝙼𝚒𝚛 𝙵𝚊𝚢𝚎𝚔 𝙷𝚘𝚜𝚜𝚊𝚒𝚗<br><br>𝚏𝚊𝚢𝚎𝚔𝚑𝚘𝚜𝚜𝚊𝚒𝚗.𝟿𝟾@𝚐𝚖𝚊𝚒𝚕.𝚌𝚘𝚖 <br><br>+𝟾𝟾𝟶𝟷𝟾𝟽𝟺𝟼𝟶𝟼𝟶𝟸𝟸</p>
+  </div>
+  <div class="c">
+    <p>𝙵𝚘𝚛 𝚖𝚘𝚛𝚎 𝚒𝚗𝚏𝚘<br><br>𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔 :</p> <a style="color: white;" href="https://www.facebook.com/fayek.hossain.5/"><p>𝙵𝚊𝚢𝚎𝚔 𝙷𝚘𝚜𝚜𝚊𝚒𝚗</p></a>
+  </div>
+</div>
+   <div id="googleMap" style="width:100%;height:200px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(23.8225778,90.3649866),
+  zoom:15
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTjk2mLeYkbZ1xSkjha5CezXJV4zv0wIg&callback=myMap"></script>
+
+   </body>
+</html>
